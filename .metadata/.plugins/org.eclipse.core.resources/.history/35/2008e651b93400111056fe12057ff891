@@ -1,0 +1,64 @@
+package com.kh.start.run;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class SelectMemberRun {
+
+	public static void main(String[] args) {
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rset = null;
+
+		String sql = """
+						SELECT
+						       MEM_NO
+						     , MEM_NAME
+						     , MEM_ID
+						     , MEM_PWD
+						     , MEM_ADDRESS
+						     , ACCOUNT_NUM
+						     , BANK_NAME
+						  FROM
+						       MEMBER
+						 ORDER
+						    BY
+						       MEM_NO
+					""";
+
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE",
+					"C##MH",
+					"MH");
+			stmt = conn.createStatement();
+			rset = stmt.executeQuery(sql);
+			
+			while(rset.next()) {
+				int memNo = rset.getInt("MEM_NO");
+				String memName = rset.getString("MEM_NAME");
+				String memId = rset.getString("MEM_ID");
+				String memPwd = rset.getString("MEM_PWD");
+				String memAddress = rset.getString("MEM_ADDRESS");
+				int accountNum = rset.getInt("ACCOUNT_NUM"); 
+				String bankName = rset.getString("BANK_NAME");
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+			
+		}
+	
+		
+	}
+
+}

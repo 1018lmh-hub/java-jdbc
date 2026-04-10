@@ -1,0 +1,55 @@
+package com.kh.start.run;
+
+import java.sql.Connection;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class InsertSupplementsRun {
+
+	public static void main(String[] args) {
+	
+		Connection conn = null;
+		Statement stmt = null;
+		int result = 0;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String supNo = ""
+		System.out.print("SUP_NAME을 입력해주세요 > ");
+		String supName = sc.nextLine();
+		System.out.print("SUP_PRICE을 입력해주세요 > ");
+		String supPrice = sc.nextLine();
+		System.out.print("PILLS을 입력해주세요 > ");
+		String pills = sc.nextLine();
+		
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("CREATE SEQUENCE SEQ_ZONE_ID START WITH 4 NOCACHE")
+		sb.append("INSERT INTO SUPPLEMENTS VALUES(");
+		sb.append(""
+		
+		
+		CREATE SEQUENCE SEQ_ZONE_ID
+		START WITH 9
+		NOCACHE;
+
+		/*
+		 * 시퀀스 사용 방법
+		 * 시퀀스명.NEXTVAL : 다음 번호 발행 NEXT
+		 * 시퀀스명.CURRVAL : 현재 번호 확인 CURRENT(NEXTVAL 한번 이상 호출 후 사용가능)
+		 */
+
+		SELECT SEQ_ZONE_ID.NEXTVAL FROM DUAL;
+		SELECT SEQ_ZONE_ID.CURRVAL FROM DUAL;
+
+		INSERT
+		  INTO
+		       ZONE
+		VALUES
+		       (
+		       SEQ_ZONE_ID.NEXTVAL
+		
+
+	}
+
+}

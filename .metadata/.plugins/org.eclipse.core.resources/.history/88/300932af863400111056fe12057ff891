@@ -1,0 +1,30 @@
+package com.kh.start.run;
+
+public class InsertRun {
+
+	public static void main(String[] args) {
+		//반복 계속해보기 -> 손이 기억할 때까지
+		//JDBC 맛보기
+		/*
+		 * Java를 사용하지 않았을 때 ZONE 테이블에 한 행 인서트하려면 어떤 절차가 필요했지?
+		 * 
+		 * INSERT
+		 *   INTO
+		 *        ZONE
+		 * VALUES
+		 *        (
+		 *        
+		 *        );
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
+
+	}
+
+}

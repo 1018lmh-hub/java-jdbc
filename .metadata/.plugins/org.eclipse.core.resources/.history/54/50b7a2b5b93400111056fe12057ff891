@@ -1,0 +1,19 @@
+package com.kh.start.run;
+
+import java.sql.Connection;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class InsertSaveRun {
+
+	public static void main(String[] args) {
+		
+		Connection conn = null;
+		Statement stmt = null;
+		int result = 0;
+		
+		Scanner sc = new Scanner(System.in);
+
+	}
+
+}

@@ -1,0 +1,25 @@
+package com.kh.start.run;
+
+import java.sql.Connection;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class InsertSaveRun {
+
+	public static void main(String[] args) {
+		
+		Connection conn = null;
+		Statement stmt = null;
+		int result = 0;
+		
+		Scanner sc = new Scanner(System.in);
+		
+
+		
+		"MEM_NO"	NUMBER		NOT NULL,
+		"SUP_NO"	NUMBER		NOT NULL,
+		"SAVE_DATE"	DATE	DEFAULT SYSDATE	NOT NULL
+
+	}
+
+}

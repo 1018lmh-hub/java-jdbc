@@ -1,0 +1,48 @@
+package com.kh.start.run;
+
+import java.sql.Connection;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class InsertMemberRun {
+
+	public static void main(String[] args) {
+		
+		Connection conn = null;
+		Statement stmt = null;
+		int result = 0;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("MEM_NAME을 입력해주세요 > ");
+		String memName = sc.nextLine();
+		System.out.print("MEM_ID을 입력해주세요 > ");
+		String memId = sc.nextLine();
+		System.out.print("MEM_PWD을 입력해주세요 > ");
+		String memPwd = sc.nextLine();
+		System.out.print("MEM_ADDRESS을 입력해주세요 > ");
+		String memAddress = sc.nextLine();
+		System.out.print("ACCOUNT_NUM을 입력해주세요 > ");
+		String accountNum = sc.nextLine();
+		System.out.print("BANK_NAME을 입력해주세요 > ");
+		String bankName = sc.nextLine();
+		
+		StringBuilder sb = new StringBuilder();
+		
+		
+		CREATE TABLE "MEMBER" (
+				"MEM_NO"	NUMBER		NOT NULL,
+				"MEM_NAME"	VARCHAR2(50)		NOT NULL,
+				"MEM_ID"	VARCHAR2(40)		NOT NULL,
+				"MEM_PWD"	VARCHAR2(60)		NOT NULL,
+				"MEM_ADDRESS"	VARCHAR2(1000)		NOT NULL,
+				"ACCOUNT_NUM"	NUMBER		NOT NULL,
+				"BANK_NAME"	VARCHAR2(20)		NOT NULL
+			);
+		
+		INSERT INTO MEMBER
+		VALUES(1, '홍길동', 'USER01', 'PWD01', 'ADDRESS01', 123456789012, '하나');
+
+	}
+
+}

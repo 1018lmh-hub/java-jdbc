@@ -1,0 +1,16 @@
+package com.kh.start.run;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class InsertSupplementsRun {
+
+	public static void main(String[] args) {
+	
+		Connection conn = null;
+		Statement stmt = null;
+		int result = 0;
+
+	}
+
+}

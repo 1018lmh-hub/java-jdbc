@@ -1,0 +1,30 @@
+package com.kh.start.run;
+
+import java.sql.Connection;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class InsertSupplementsRun {
+
+	public static void main(String[] args) {
+	
+		Connection conn = null;
+		Statement stmt = null;
+		int result = 0;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("SUP_NO를 입력해주세요 > ");
+		String supNo = sc.nextLine();
+		System.out.print("SUP_NAME을 입력해주세요 > ");
+		String supName = sc.nextLine();
+		System.out.print("SUP_PRICE을 입력해주세요 > ");
+		String supPrice = sc.nextLine();
+		System.out.print("PILLS을 입력해주세요 > ");
+		String pills = sc.nextLine();
+		
+		
+
+	}
+
+}

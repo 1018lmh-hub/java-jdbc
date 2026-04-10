@@ -1,0 +1,37 @@
+package com.kh.start.run;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class SelectSupplementsRun {
+
+	public static void main(String[] args) {
+		
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rset = null;
+
+		String sql = """
+						SELECT
+						       SUP_NO
+						     , SUP_NAME
+						     , SUP_PIRCE
+						     , PILLS
+						  FROM
+						       SUPPLEMENTS
+						 ORDER
+						    BY
+						       SUP_NO DESC
+					""";
+		
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		conn = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE",
+									"C##MH",
+									"MH");
+		stmt = conn.createStatement();
+		rset = stmt.executerQuery(sql);
+		
+	}
+
+}
