@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+<entry key = "insertSupplements">
+
+	INSERT
+	  INTO
+	       SUPPLEMENTS
+	VALUES
+		   (
+	       SEQ_SUP_ID.NEXTVAL
+	     , ?
+	     , ?
+	     , ?
+	       )
+	       
+</entry>
+
+<entry key = "selectSupplementsList">
+
+	SELECT
+		   SUP_NO
+		 , SUP_NAME
+	  FROM
+	       SUPPLEMENTS
+	       
+</entry>
+
+<entry key = "selectSupplements">
+
+	SELECT
+		   SUP_NO
+		 , SUP_NAME
+		 , SUP_PRICE
+		 , PILLS
+	  FROM
+	       SUPPLEMENTS
+	 ORDER
+	    BY
+	       SUP_ID
+	       
+
+</entry>
+
+<entry key = "updateSupplements">
+
+	UPDATE
+	       SUPPLEMENTS
+	   SET
+	       SUP_NAME = ?
+	     , SUP_PRICE = ?
+	     , PILLS = ?
+	 WHERE
+	       SUP_NO = ?
+
+</entry>
+
+<entry key = "deleteSupplements">
+
+	DELETE 
+	  FROM
+	       SUPPLEMENTS
+	 WHERE
+	       SUP_NO = ?
+
+
+</entry>
+
+
+</properties>
