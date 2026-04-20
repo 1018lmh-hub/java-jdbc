@@ -16,8 +16,6 @@ public class SupplementsService {
 	public int insertSupplements(SupplementsDto supplements) {
 		int result = 0;
 		Connection conn = getConnection();
-		new 
-		
 		sd.insertSupplements(supplements);
 		
 		

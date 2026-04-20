@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import com.kh.member.BoardDto;
+import com.kh.member.exception.DuplicateMemberIdException;
 // 메서드 쓸 때 참조 안해도 됨
 import com.kh.member.exception.MemberIdTooLargeException;
 import com.kh.member.model.dao.MemberDao;
@@ -34,7 +35,7 @@ public class MemberService {
 		
 		MemberDao md = new MemberDao();
 		if(md.idCheck(conn, member.getMemberId())){
-			throw new MemberIdTooLargeException("중복아이디입니다.");
+			throw new DuplicateMemberIdException("중복아이디입니다.");
 		}
 		int result = md.signUp(conn, member);
 		
